@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fees Portal - Chikhli Paramedical & Technology College</title>
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="src/styles/index.css">
+  
+  <!-- SheetJS CDN for parsing Excel (.xlsx/.xls) and CSV client-side -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- Lucide Icons CDN for modern vector indicators -->
+  <script src="https://unpkg.com/lucide@latest" crossorigin="anonymous"></script>
+  
+  <style>
+    /* Prevent initial flashing during lazy asset loadings */
+    #root:empty {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f1f5f9;
+    }
+    #root:empty::after {
+      content: "Loading...";
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      color: #0d9488;
+      font-size: 1.2rem;
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Main entry point for dynamic render mounting -->
+  <div id="root"></div>
+
+  <!-- Load main coordinator application -->
+  <script type="module" src="src/app.js"></script>
+
+</body>
+</html>
