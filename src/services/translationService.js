@@ -1,0 +1,240 @@
+// translationService.js - Multi-language support (English and Marathi)
+
+const translations = {
+  en: {
+    collegeName: "Chikhli Paramedical & Technology College, Chikhli",
+    collegeAddr: "Chikhli, Dist. Buldhana",
+    appTitle: "CPTC - Fees Portal",
+    loginTitle: "Staff Portal Login",
+    loginSubtitle: "Sign in to access your administrative dashboard",
+    username: "Username",
+    password: "Password",
+    selectUser: "Select Your Staff Account",
+    signIn: "Sign In",
+    signOut: "Sign Out",
+    welcome: "Welcome",
+    dashboard: "Dashboard",
+    students: "Students",
+    feesDesk: "Fees Desk",
+    excelImport: "Excel Import",
+    reports: "Reports",
+    adminConsole: "Admin Console",
+    activityLogs: "Activity Logs",
+    backups: "Backup System",
+    
+    // Roles
+    super_admin: "Super Admin (Owner)",
+    admin: "Admin (Manager)",
+    clerk: "Clerk (Operator)",
+    
+    // Stats
+    totalStudents: "Total Students",
+    totalCollected: "Fees Collected",
+    totalPending: "Pending Fees",
+    todayCollection: "Today's Collection",
+    courseWise: "Course-wise Collection",
+    recentCollections: "Recent Payments",
+    pendingList: "Overdue Fees List",
+    
+    // Student Form & List
+    searchPlaceholder: "Search by Name, Mobile, Course, or Admission ID...",
+    addStudent: "Add New Student",
+    editStudent: "Edit Student Details",
+    deleteStudent: "Delete Student",
+    deleteConfirm: "Are you sure you want to delete this student record? This action cannot be undone.",
+    admissionId: "Admission ID",
+    fullName: "Full Name",
+    mobile: "Mobile Number",
+    parentMobile: "Parent/Secondary Mobile",
+    course: "Course",
+    batch: "Batch / Academic Year",
+    totalFees: "Total Fees (₹)",
+    paidFees: "Paid Fees (₹)",
+    pendingFees: "Pending Fees (₹)",
+    status: "Status",
+    actions: "Actions",
+    active: "Active",
+    completed: "Completed",
+    suspended: "Suspended",
+    save: "Save",
+    cancel: "Cancel",
+    
+    // Fees Management
+    collectFees: "Collect Fees",
+    installmentAmount: "Installment Amount (₹)",
+    paymentMethod: "Payment Method",
+    transactionId: "Transaction ID / Ref (UPI/Bank)",
+    remarks: "Remarks (e.g., Term 1, Fine)",
+    paymentHistory: "Payment History",
+    noPayments: "No payments recorded yet.",
+    receiptNo: "Receipt No",
+    receiptDate: "Date & Time",
+    collectedBy: "Collected By",
+    amountPaid: "Amount Paid",
+    printReceipt: "Print Receipt",
+    receiptTitle: "FEES RECEIPT",
+    authorizedSign: "Authorized Signatory",
+    thankYou: "Thank you for your payment!",
+    cash: "Cash",
+    upi: "UPI",
+    card: "Card/POS",
+    netBanking: "Net Banking",
+    
+    // Excel Import
+    importTitle: "Import Student Records",
+    importInstructions: "Upload a CSV or Excel file (.csv) to batch import students. Existing students with matching Admission IDs or Mobile numbers will be merged automatically to update their total/paid fees and prevent duplicates.",
+    chooseFile: "Choose CSV File",
+    uploadBtn: "Import & Merge",
+    processing: "Processing...",
+    importSuccess: "Import completed successfully!",
+    importSummary: "Successfully updated {updated} records and added {inserted} new students.",
+    
+    // Reports
+    reportsTitle: "Financial Reports",
+    dailyReport: "Daily Collection Report",
+    monthlyReport: "Monthly Fees Report",
+    pendingReport: "Pending Balance Report",
+    studentReport: "Student Ledger",
+    selectDate: "Select Date",
+    selectMonth: "Select Month",
+    exportCsv: "Export to Excel (CSV)",
+    exportPdf: "Print Report (PDF)",
+    filterBtn: "Generate",
+    noRecords: "No matching records found.",
+    
+    // Console / Admin features
+    backupRestore: "Backup & Restore",
+    backupDesc: "Download a full database snapshot (JSON) to secure your data locally, or restore a previous backup file.",
+    downloadBackup: "Export Database Backup",
+    restoreBackup: "Restore from Backup File",
+    restoreSuccess: "Database restored successfully!",
+    activityLogTitle: "Audit Logs",
+    logTime: "Timestamp",
+    logUser: "Staff User",
+    logAction: "Action / Event",
+    logType: "Event Type"
+  },
+  mr: {
+    collegeName: "चिखली पॅरामेडिकल अँड टेक्नॉलॉजी कॉलेज, चिखली",
+    collegeAddr: "चिखली, जि. बुलढाणा",
+    appTitle: "CPTC - शुल्क पोर्टल",
+    loginTitle: "कर्मचारी पोर्टल लॉगिन",
+    loginSubtitle: "तुमच्या प्रशासकीय डॅशबोर्डवर प्रवेश करण्यासाठी साइन इन करा",
+    username: "वापरकर्तानाव (Username)",
+    password: "पासवर्ड (Password)",
+    selectUser: "तुमचे कर्मचारी खाते निवडा",
+    signIn: "साइन इन करा",
+    signOut: "बाहेर पडा (Log Out)",
+    welcome: "स्वागत आहे",
+    dashboard: "डॅशबोर्ड",
+    students: "विद्यार्थी",
+    feesDesk: "शुल्क संकलन (Fees)",
+    excelImport: "एक्सेल आयात (Import)",
+    reports: "अहवाल (Reports)",
+    adminConsole: "मुख्य नियंत्रण (Admin)",
+    activityLogs: "कृती नोंदी (Logs)",
+    backups: "बॅकअप प्रणाली",
+    
+    // Roles
+    super_admin: "मुख्य मालक (Super Admin)",
+    admin: "व्यवस्थापक (Admin)",
+    clerk: "लिपिक (Clerk)",
+    
+    // Stats
+    totalStudents: "एकूण विद्यार्थी",
+    totalCollected: "जमा शुल्क",
+    totalPending: "उर्वरित शुल्क (Pending)",
+    todayCollection: "आजचे संकलन",
+    courseWise: "अभ्यासक्रमानुसार संकलन",
+    recentCollections: "अलीकडील पेमेंट",
+    pendingList: "उर्वरित शुल्क असलेले विद्यार्थी",
+    
+    // Student Form & List
+    searchPlaceholder: "नाव, मोबाईल, कोर्स किंवा ॲडमिशन आयडीने शोधा...",
+    addStudent: "नवीन विद्यार्थी जोडा",
+    editStudent: "विद्यार्थी माहिती बदला",
+    deleteStudent: "विद्यार्थी काढून टाका",
+    deleteConfirm: "तुम्हाला नक्की हा विद्यार्थी रेकॉर्ड काढून टाकायचा आहे का? ही क्रिया परत घेतली जाऊ शकत नाही.",
+    admissionId: "ॲडमिशन आयडी",
+    fullName: "पूर्ण नाव",
+    mobile: "मोबाईल नंबर",
+    parentMobile: "पालकांचा मोबाईल नंबर",
+    course: "अभ्यासक्रम (Course)",
+    batch: "बॅच / शैक्षणिक वर्ष",
+    totalFees: "एकूण शुल्क (₹)",
+    paidFees: "भरलेले शुल्क (₹)",
+    pendingFees: "बाकी शुल्क (₹)",
+    status: "स्थिती (Status)",
+    actions: "पर्याय",
+    active: "सक्रिय (Active)",
+    completed: "पूर्ण (Completed)",
+    suspended: "निलंबित (Suspended)",
+    save: "जतन करा",
+    cancel: "रद्द करा",
+    
+    // Fees Management
+    collectFees: "शुल्क जमा करा",
+    installmentAmount: "हप्त्याची रक्कम (₹)",
+    paymentMethod: "पेमेंट पद्धत",
+    transactionId: "व्यवहार आयडी / संदर्भ (UPI/Bank)",
+    remarks: "नोंद / शेरा (उदा. हप्ता १, दंड)",
+    paymentHistory: "पेमेंट इतिहास",
+    noPayments: "अद्याप कोणतीही पेमेंट्स नोंदवली नाहीत.",
+    receiptNo: "पावती क्रमांक",
+    receiptDate: "तारीख आणि वेळ",
+    collectedBy: "जमा करणारे कर्मचारी",
+    amountPaid: "भरलेली रक्कम",
+    printReceipt: "पावती छापा (Print)",
+    receiptTitle: "शुल्क पावती (RECEIPT)",
+    authorizedSign: "अधिकृत स्वाक्षरी",
+    thankYou: "तुमच्या पेमेंटबद्दल धन्यवाद!",
+    cash: "रोख (Cash)",
+    upi: "युपीआय (UPI)",
+    card: "कार्ड (POS)",
+    netBanking: "नेट बँकिंग",
+    
+    // Excel Import
+    importTitle: "विद्यार्थी माहिती आयात करा",
+    importInstructions: "विद्यार्थी डेटा एकाच वेळी जोडण्यासाठी CSV फाईल (.csv) अपलोड करा. एकाच नावाचे किंवा ॲडमिशन आयडी असलेले विद्यार्थी स्वयंचलितपणे एकत्रित केले जातील जेणेकरून डुप्लिकेट होणार नाही.",
+    chooseFile: "CSV फाईल निवडा",
+    uploadBtn: "आयात करा",
+    processing: "प्रक्रिया चालू आहे...",
+    importSuccess: "माहिती यशस्वीरित्या आयात झाली!",
+    importSummary: "यशस्वीरित्या {updated} रेकॉर्ड्स अद्ययावत केले आणि {inserted} नवीन विद्यार्थी जोडले.",
+    
+    // Reports
+    reportsTitle: "आर्थिक अहवाल",
+    dailyReport: "दैनिक संकलन अहवाल",
+    monthlyReport: "मासिक शुल्क अहवाल",
+    pendingReport: "बाकी शुल्क अहवाल",
+    studentReport: "विद्यार्थी लेजर",
+    selectDate: "तारीख निवडा",
+    selectMonth: "महिना निवडा",
+    exportCsv: "एक्सेलमध्ये एक्सपोर्ट करा (CSV)",
+    exportPdf: "अहवाल छापा (PDF)",
+    filterBtn: "अहवाल बनवा",
+    noRecords: "नोंदी आढळल्या नाहीत.",
+    
+    // Console / Admin features
+    backupRestore: "बॅकअप आणि रिस्टोर",
+    backupDesc: "तुमचा डेटा सुरक्षित ठेवण्यासाठी पूर्ण डेटाबेस बॅकअप (JSON) डाउनलोड करा किंवा जुनी बॅकअप फाईल पुन्हा स्थापित (Restore) करा.",
+    downloadBackup: "बॅकअप फाईल डाउनलोड करा",
+    restoreBackup: "बॅकअप फाईल अपलोड करा",
+    restoreSuccess: "डेटाबेस यशस्वीरित्या रिस्टोर केला गेला!",
+    activityLogTitle: "सुरक्षा व कृती नोंदी",
+    logTime: "तारीख आणि वेळ",
+    logUser: "कर्मचारी",
+    logAction: "केलेली कृती",
+    logType: "नोंद प्रकार"
+  }
+};
+
+export default translations;
+export function translate(key, lang = 'en', replaces = {}) {
+  const dict = translations[lang] || translations['en'];
+  let text = dict[key] || translations['en'][key] || key;
+  Object.keys(replaces).forEach(replaceKey => {
+    text = text.replace(`{${replaceKey}}`, replaces[replaceKey]);
+  });
+  return text;
+}
