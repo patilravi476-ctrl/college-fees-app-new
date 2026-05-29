@@ -15,7 +15,7 @@ export const Login = {
           <img src="/assets/logo.png"
      alt="College Logo"
      style="width:100px;height:auto;margin-bottom:10px;">
-            ; border-radius: var(--radius); font-weight: 800; font-size: 1.75rem; box-shadow: 0 0 20px rgba(13,148,136,0.3); margin-bottom: 12px;">CP</div>
+           
             <h1 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 4px;">${translate('collegeName', lang)}</h1>
             <p style="font-size: 0.85rem; color: var(--text-secondary);">${translate('loginSubtitle', lang)}</p>
           </div>
