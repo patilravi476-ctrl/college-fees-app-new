@@ -495,11 +495,7 @@ const Shell = {
          alt="College Logo"
          style="width:70px; height:auto; display:block; margin:0 auto 8px auto;">
 
-    <div class="logo-text">
-        <h2>CPTC</h2>
-        <p>FEES MODULE</p>
-    </div>
-</div>
+     
 
           <!-- Menu Links -->
           <nav class="sidebar-menu">
