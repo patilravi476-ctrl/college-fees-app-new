@@ -490,15 +490,16 @@ const Shell = {
     return `
       <div class="app-shell">
         
-        <!-- Sidebar Navigation Drawer -->
-        <aside class="sidebar" id="app-sidebar">
-          <div class="sidebar-logo">
-            <div class="logo-icon">CP</div>
-            <div class="logo-text">
-              <h2>CPTC</h2>
-              <p>FEES MODULE</p>
-            </div>
-          </div>
+        <div class="sidebar-logo" style="text-align:center;">
+    <img src="./assets/logo.png"
+         alt="College Logo"
+         style="width:70px; height:auto; display:block; margin:0 auto 8px auto;">
+
+    <div class="logo-text">
+        <h2>CPTC</h2>
+        <p>FEES MODULE</p>
+    </div>
+</div>
 
           <!-- Menu Links -->
           <nav class="sidebar-menu">
