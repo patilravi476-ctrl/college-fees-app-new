@@ -12,6 +12,9 @@ export const Login = {
         <div class="login-card">
           <!-- Logo Header -->
           <div style="text-align: center; margin-bottom: 24px;">
+          <img src="/assets/logo.png"
+     alt="College Logo"
+     style="width:100px;height:auto;margin-bottom:10px;">
             <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: var(--primary); color: white; border-radius: var(--radius); font-weight: 800; font-size: 1.75rem; box-shadow: 0 0 20px rgba(13,148,136,0.3); margin-bottom: 12px;">CP</div>
             <h1 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 4px;">${translate('collegeName', lang)}</h1>
             <p style="font-size: 0.85rem; color: var(--text-secondary);">${translate('loginSubtitle', lang)}</p>
