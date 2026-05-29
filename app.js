@@ -489,16 +489,13 @@ const Shell = {
 
     return `
       <div class="app-shell">
-        
+      <aside class="sidebar" id="app-sidebar">  
         <div class="sidebar-logo" style="text-align:center;">
     <img src="./assets/logo.png"
          alt="College Logo"
-         style="width:70px; height:auto; display:block; margin:0 auto 8px auto;">
-
+         style="width:100px; height:auto; display:block; margin:0 auto 8px auto;">
+<nav class="sidebar-menu">
      
-
-          <!-- Menu Links -->
-          <nav class="sidebar-menu">
             ${menuItems.map(item => `
               <div class="sidebar-link ${active === item.id ? 'active' : ''}" onclick="app.changeTab('${item.id}'); document.getElementById('app-sidebar').classList.remove('open')">
                 <i data-lucide="${item.icon}" style="width: 20px; height: 20px;"></i>
