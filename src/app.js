@@ -492,10 +492,11 @@ const Shell = {
         
         <!-- Sidebar Navigation Drawer -->
         <aside class="sidebar" id="app-sidebar">
-        <div class="sidebar-logo" style="text-align:center; padding:15px 0;">
+       <div class="sidebar-logo" style="display:block; text-align:center; padding:10px;">
     <img src="assets/logo.png"
          alt="College Logo"
-         style="width:70px; height:auto; display:block; margin:0 auto 8px auto;">
+         style="width:70px; height:auto; display:block; margin:0 auto;">
+</div>
 
     <div style="color:white; font-weight:700; font-size:16px;">
         CPTC
