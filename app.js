@@ -491,7 +491,7 @@ const Shell = {
       <div class="app-shell">
       <aside class="sidebar" id="app-sidebar">  
         <div class="sidebar-logo" style="text-align:center;">
-    <img src="./assets/logo.png"
+    <img src="assets/logo.png"
          alt="College Logo"
          style="width:100px; height:auto; display:block; margin:0 auto 8px auto;">
 <nav class="sidebar-menu">
