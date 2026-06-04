@@ -492,10 +492,18 @@ const Shell = {
         
         <!-- Sidebar Navigation Drawer -->
         <aside class="sidebar" id="app-sidebar">
-        <div class="sidebar-logo" style="text-align:center;">
+        <div class="sidebar-logo" style="text-align:center; padding:15px 0;">
     <img src="assets/logo.png"
          alt="College Logo"
-         style="width:90px; height:auto; display:block; margin:0 auto;">
+         style="width:70px; height:auto; display:block; margin:0 auto 8px auto;">
+
+    <div style="color:white; font-weight:700; font-size:16px;">
+        CPTC
+    </div>
+
+    <div style="color:#9ca3af; font-size:11px;">
+        FEES MODULE
+    </div>
 </div>
           </div>
 
