@@ -494,6 +494,7 @@ const Shell = {
     <img src="assets/logo.png"
          alt="College Logo"
          style="width:100px; height:auto; display:block; margin:0 auto 8px auto;">
+         </div>
 <nav class="sidebar-menu">
      
             ${menuItems.map(item => `
