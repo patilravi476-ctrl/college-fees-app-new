@@ -12,7 +12,7 @@ export const Login = {
         <div class="login-card">
         <!-- Logo Header -->
 <div style="text-align:center; margin-bottom:24px;">
-    <img src="./assets/logo.png"
+   <img src="assets/logo.png"
          alt="College Logo"
          style="width:100px; height:auto; display:block; margin:0 auto 10px auto;">
 
