@@ -10,6 +10,20 @@ export const Login = {
     return `
       <div class="login-bg">
         <div class="login-card">
+        <!-- Logo Header -->
+<div style="text-align:center; margin-bottom:24px;">
+    <img src="./assets/logo.png"
+         alt="College Logo"
+         style="width:100px; height:auto; display:block; margin:0 auto 10px auto;">
+
+    <h1 style="font-size:1.4rem; color:var(--text-primary); margin-bottom:4px;">
+        ${translate('collegeName', lang)}
+    </h1>
+
+    <p style="font-size:0.85rem; color:var(--text-secondary);">
+        ${translate('loginSubtitle', lang)}
+    </p>
+</div>
                    <!-- Error Alert -->
           ${state.loginError ? `
             <div style="background: var(--accent-red-bg); color: var(--accent-red); padding: 12px; border-radius: var(--radius-sm); font-size: 0.85rem; margin-bottom: 16px; border: 1px solid rgba(239, 68, 68, 0.2); display: flex; align-items: center; gap: 8px;">
