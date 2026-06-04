@@ -167,11 +167,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px;
-  margin-bottom: 32px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 .logo-icon {
   width: 40px;
