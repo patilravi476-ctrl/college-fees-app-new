@@ -105,8 +105,7 @@ export const StudentFormModal = {
                 <!-- Initial Paid Fees (Disabled if editing - must use payment instead) -->
                 <div class="form-group">
                   <label for="form-paid-fees">${translate('paidFees', lang)}</label>
-                  <input type="number" class="form-control" id="form-paid-fees" min="0" value="${student.paidFees}" ${isEdit ? 'disabled' : ''}>
-                  ${isEdit ? `<span style="font-size: 0.7rem; color: var(--text-light);">To update, collect installment via Fees Desk.</span>` : ''}
+                  <input type="number" class="form-control" id="form-paid-fees" min="0" value="${student.paidFees}"  
                 </div>
               </div>
             </div>
