@@ -226,7 +226,7 @@ window.app = {
       app.triggerToast(`Collected ₹${amount} from ${student.name}`, "success");
       
       // Auto open printed receipt preview modal
-      updateState({ printingReceiptId: tx.id });
+      //updateState({ printingReceiptId: tx.id });
       app.refreshData();
     } catch (err) {
       app.triggerToast(err.message, "error");
