@@ -496,7 +496,7 @@ const Shell = {
     <img src="assets/logo.png"
          alt="College Logo"
          style="width:70px; height:auto; display:block; margin:0 auto;">
-</div>
+
 
     <div style="color:white; font-weight:700; font-size:16px;">
         CPTC
@@ -506,7 +506,7 @@ const Shell = {
         FEES MODULE
     </div>
 </div>
-          </div>
+         
 
           <!-- Menu Links -->
           <nav class="sidebar-menu">
