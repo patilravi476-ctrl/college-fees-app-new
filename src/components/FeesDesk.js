@@ -73,7 +73,9 @@ export const FeesDesk = {
                 <label for="fee-amount">${translate('installmentAmount', lang)} *</label>
                 <input type="number" class="form-control" id="fee-amount" min="1" required 
                   value="" 
-                  max="${selectedStudent ? selectedStudent.pendingFees : ''}">
+                  max="${selectedStudent && selectedStudent.pendingFees > 0
+  ? selectedStudent.pendingFees
+  : ''}">
               </div>
 
               <!-- Method selector -->
