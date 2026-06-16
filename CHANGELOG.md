@@ -54,3 +54,12 @@ All notable changes to CPTC Fees Module will be documented here.
 - Automatic Backup System
 - Multi-Campus Support
 - QR Based Receipt Verification
+- ## v1.0.0 Stable Baseline
+
+- Login working
+- Dashboard working
+- Student Management working
+- Fees Desk working
+- Sidebar logo working
+- Favicon working
+- Branding completed
