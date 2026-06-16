@@ -63,3 +63,9 @@ All notable changes to CPTC Fees Module will be documented here.
 - Sidebar logo working
 - Favicon working
 - Branding completed
+- ## v1.0.1
+
+### Investigation
+- Verified payment recording system.
+- Verified receipt generation system.
+- Confirmed no duplicate transaction creation bug.
