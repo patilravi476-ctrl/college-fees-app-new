@@ -13,7 +13,7 @@ import { Reports } from "./components/Reports.js";
 import { AdminConsole } from "./components/AdminConsole.js";
 
 // Core reactive state
-const state = {
+const state   = {
   user: null, 
   activeTab: "dashboard",
   language: "en",
@@ -22,6 +22,7 @@ const state = {
   transactions: [],
   logs: [],
   alert: null, // { message, type: 'success' | 'error' | 'warning' }
+    isSavingPayment: false,
   
   // Student filter and modal state
   selectedCourseFilter: "ALL",
@@ -200,15 +201,18 @@ window.app = {
     updateState({ activeTab: "fees", selectedStudentId: studentId });
   },
 
-  handleRecordPayment: async (e) => {
-    e.preventDefault();
-    const studentId = document.getElementById('fee-student-select').value;
-    const amount = Number(document.getElementById('fee-amount').value);
-    const paymentMethod = document.getElementById('fee-method').value;
-    const transactionId = document.getElementById('fee-tx-ref') ? document.getElementById('fee-tx-ref').value : "";
-    const remarks = document.getElementById('fee-remarks').value;
+ handleRecordPayment: async (e) => {
+  e.preventDefault();
 
-    const student = state.students.find(s => s.id === studentId);
+  if (state.isSavingPayment) return;
+
+  updateState({ isSavingPayment: true });
+
+  const studentId = ...
+    if (!student) {
+  updateState({ isSavingPayment: false });
+  return;
+}
     if (!student) return;
 
     try {
@@ -229,9 +233,11 @@ window.app = {
       //updateState({ printingReceiptId: tx.id });
       app.refreshData();
     } catch (err) {
-      app.triggerToast(err.message, "error");
-    }
-  },
+  app.triggerToast(err.message, "error");
+} finally {
+  updateState({ isSavingPayment: false });
+}
+},
 
   openReceiptModal: (txId) => {
     updateState({ printingReceiptId: txId });
