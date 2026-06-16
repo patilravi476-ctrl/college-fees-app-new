@@ -208,12 +208,28 @@ window.app = {
 
   updateState({ isSavingPayment: true });
 
-  const studentId = ...
-    if (!student) {
+  const studentId = document.getElementById('fee-student-select').value;
+const amount = Number(document.getElementById('fee-amount').value);
+const paymentMethod = document.getElementById('fee-method').value;
+const transactionId = document.getElementById('fee-tx-ref')
+  ? document.getElementById('fee-tx-ref').value
+  : "";
+const remarks = document.getElementById('fee-remarks').value;
+
+console.log("PAYMENT START", {
+  amount,
+  studentId,
+  paymentMethod,
+  transactionId,
+  remarks
+});
+
+const student = state.students.find(s => s.id === studentId);
+
+if (!student) {
   updateState({ isSavingPayment: false });
   return;
 }
-    if (!student) return;
 
     try {
       const tx = await dbService.recordPayment({
