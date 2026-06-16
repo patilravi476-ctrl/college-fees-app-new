@@ -99,10 +99,18 @@ export const FeesDesk = {
                 <input type="text" class="form-control" id="fee-remarks" placeholder="e.g. 2nd installment, exam fees">
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;" ${!selectedStudent ? 'disabled' : ''}>
-                <i data-lucide="check-circle" style="width: 18px; height: 18px;"></i>
-                <span>Log Collection Entry</span>
-              </button>
+              <button type="submit"
+        class="btn btn-primary"
+        style="width: 100%; margin-top: 10px;"
+        ${!selectedStudent || state.isSavingPayment ? 'disabled' : ''}>
+
+  <i data-lucide="check-circle" style="width: 18px; height: 18px;"></i>
+
+  <span>
+    ${state.isSavingPayment ? 'Saving...' : 'Log Collection Entry'}
+  </span>
+
+</button>
             </form>
           </div>
 
