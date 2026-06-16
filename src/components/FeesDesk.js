@@ -72,7 +72,7 @@ export const FeesDesk = {
               <div class="form-group">
                 <label for="fee-amount">${translate('installmentAmount', lang)} *</label>
                 <input type="number" class="form-control" id="fee-amount" min="1" required 
-                  value="${selectedStudent ? selectedStudent.pendingFees : ''}" 
+                  value="" 
                   max="${selectedStudent ? selectedStudent.pendingFees : ''}">
               </div>
 
